@@ -34,6 +34,10 @@ export const musicPlayerInit = () => {
       } else {
          audioPlayer.play();
       }
+      //вывод времени трека до воспроизведения
+      /* audioPlayer.addEventListener('canplay', () => {
+         updateTime();
+      }) */
    };
 
    //предыдущий трек
