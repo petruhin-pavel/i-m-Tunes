@@ -2,6 +2,7 @@
 import { radioPlayerInit } from './radioPlayer.js';
 import { videoPlayerInit } from './videoPlayer.js';
 import { musicPlayerInit } from './musicPlayer.js';
+//import videoPlayerInit from './videoPlayer.js'; //Альтернативный способ экспорта
 
 // Переменные и константы
 const playerBtn = document.querySelectorAll('.player-btn'); // получаем все объекты с классом .player-btn
@@ -27,6 +28,6 @@ playerBtn.forEach((btn, i) => {
 
 
 // вызов функций
-radioPlayerInit();
 videoPlayerInit();
+radioPlayerInit();
 musicPlayerInit();
