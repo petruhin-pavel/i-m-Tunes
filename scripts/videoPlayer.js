@@ -1,3 +1,6 @@
+//импорт кода из supScript.js
+import { addZero } from './supScript.js';
+
 //экспорт кода
 export const videoPlayerInit = () => {
    // video-player
@@ -44,12 +47,6 @@ export const videoPlayerInit = () => {
       videoPlayer.currentTime = 0; //Возвращаем видео в начало
 
    };
-
-
-   //условие ? (выполнится это если условие верно) : (выполнится это если условие не верно, лож)
-   const addZero = n => n < 10 ? '0' + n : n; // добавляем 0 перед минутами и секундами, если число <10 (тернарный оператор "?")
-
-
 
    videoPlayer.addEventListener('click', togglePlay); //событие при клике в центр видео
    videoButtonPlay.addEventListener('click', togglePlay); //событие при клике на кнопку плей пауза
