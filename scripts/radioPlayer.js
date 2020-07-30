@@ -69,4 +69,10 @@ export const radioPlayerInit = () => {
       }
       changeIconPlay();
    });
+
+   //остановка при переключении вкладки
+   radioPlayerInit.stop = () => {
+      audio.pause();
+      changeIconPlay();
+   };
 };

@@ -120,5 +120,15 @@ export const musicPlayerInit = () => {
       const allWidth = audioProgress.clientWidth; //получаем полную длину трека
       const progress = (x / allWidth) * audioPlayer.duration;
       audioPlayer.currentTime = progress;
-   })
+   });
+
+   //остановка при переключении вкладки
+   musicPlayerInit.stop = () => {
+      if (!audioPlayer.paused) {
+         audioPlayer.pause();
+         audio.classList.remove('play'); // убираем классы
+         audioButtonPlay.classList.remove('fa-pause');
+         audioButtonPlay.classList.add('fa-play');
+      }
+   }
 };

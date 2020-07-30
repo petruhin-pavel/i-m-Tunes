@@ -14,6 +14,10 @@ const deactivationPlayer = () => {
    temp.style.display = 'none'; //скрываем элемент
    playerBtn.forEach((item) => { item.classList.remove('active') }); //если код в одной стоке, можно не использовать {}
    playerBlock.forEach((item) => { item.classList.remove('active') });//если принимаем только один элемент "item" можно не использовать ()
+
+   musicPlayerInit.stop();
+   videoPlayerInit.stop();
+   radioPlayerInit.stop();
 };
 
 // Обработчики событий (перебор элементов "Кол бэк функция")

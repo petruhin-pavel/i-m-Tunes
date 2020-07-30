@@ -87,6 +87,13 @@ export const videoPlayerInit = () => {
    //Альтернативный метод вызова функции плей и пауза для аудио и видеоплееров
    videoPlayer.addEventListener('play', toggleIcon);
    videoPlayer.addEventListener('pause', toggleIcon);
+
+   //остановка при переключении вкладки
+   videoPlayerInit.stop = () => {
+      if (!videoPlayer.paused) {
+         togglePlay();
+      }
+   };
 };
 
 //export default videoPlayer; //Альтернативный способ экспорта (по дефолту)
